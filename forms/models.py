@@ -1,5 +1,5 @@
 from django.db import models
-
+from django import forms
 # Create your models here.
 
 class QuestionSet(models.Model):
@@ -14,6 +14,6 @@ class QuestionSet(models.Model):
     my_dream_day = models.TextField(verbose_name='What does my dream day look like?')
 
 
-    when_will_finish_project = models.DateTimeField(verbose_name='When will I finish this project?',auto_now=False, auto_now_add=False)
+    when_will_finish_project = models.DateField(verbose_name='When will I finish this project?')
     tools_and_tech = models.TextField(verbose_name='What Tools and Tech will I use?')
     how_to_stay_focused = models.TextField(verbose_name='How will I stay focused?')
